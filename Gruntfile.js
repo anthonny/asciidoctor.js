@@ -204,7 +204,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-coveralls');
 
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('dist', ['clean', 'rake', 'npm', 'bower', 'uglify', 'copy', 'compress', 'test']);
+  grunt.registerTask('dist', ['clean', 'rake', 'npm', 'bower', 'uglify', 'copy', 'compress', 'test', 'coveralls']);
   grunt.registerTask('rake', ['shell:bundleInstall', 'shell:rakeDist']);
   grunt.registerTask('example-result', 'Log the path to view the example result task', function() {
     grunt.log.subhead('You can now open the file build/asciidoctor_example.html');
