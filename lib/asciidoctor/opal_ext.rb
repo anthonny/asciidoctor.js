@@ -5,6 +5,7 @@
       isRhino = typeof java !== 'undefined',
       value;
 
+
   // With browserify we can use module and XMLHttpRequest, so for node
   // we must test that we have not XMLHttpRequest
   if (isNode && !isBrowser) {
@@ -26,6 +27,8 @@
     value = 'standalone';
   }
   console.log('====== JAVASCRIPT_PLATFORM ========== ', value);
+  console.log('====== Value of window ', window);
+  console.log('====== Value of module ', module);
 )
 JAVASCRIPT_PLATFORM = %x(value)
 require 'strscan'
