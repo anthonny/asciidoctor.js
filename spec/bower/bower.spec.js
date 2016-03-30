@@ -1,6 +1,6 @@
-var options = {
+var testOptions = {
   platform: 'Bower',
   baseDir: __dirname
 };
 
-commonSpec(options, Opal, Opal.Asciidoctor);
+commonSpec(testOptions, Opal, Opal.Asciidoctor);
