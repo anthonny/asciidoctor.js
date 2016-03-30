@@ -1,17 +1,24 @@
 %x(
-  var value;
-  if (typeof module !== 'undefined' && module.exports) {
+  var isNode = typeof module !== 'undefined' && module.exports,
+      isBrowser = typeof XMLHttpRequest !== 'undefined',
+      isNashorn = typeof Java !== 'undefined' && Java.type,
+      isRhino = typeof java !== 'undefined',
+      value;
+
+  // With browserify we can use module and XMLHttpRequest, so for node
+  // we must test that we have not XMLHttpRequest
+  if (isNode && !isBrowser) {
     value = 'node';
   }
-  else if (typeof XMLHttpRequest !== 'undefined') {
+  else if (isBrowser) {
   // or we can check for document
   //else if (typeof document !== 'undefined' && document.nodeType) {
     value = 'browser';
   }
-  else if (typeof Java !== 'undefined' && Java.type) {
+  else if (isNashorn) {
     value = 'java-nashorn';
   }
-  else if (typeof java !== 'undefined') {
+  else if (isRhino) {
     value = 'java-rhino';
   }
   else {
