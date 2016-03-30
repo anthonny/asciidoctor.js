@@ -1,6 +1,6 @@
 var options = {
   platform: 'Bower',
-  baseDir: __direname
-}
+  baseDir: __dirname
+};
 
 commonSpec(options, Opal, Opal.Asciidoctor);
