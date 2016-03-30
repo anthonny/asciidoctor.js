@@ -25,6 +25,7 @@
     // standalone is likely SpiderMonkey
     value = 'standalone';
   }
+  console.log('====== JAVASCRIPT_PLATFORM ========== ', value);
 )
 JAVASCRIPT_PLATFORM = %x(value)
 require 'strscan'
