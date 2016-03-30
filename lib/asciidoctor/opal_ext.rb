@@ -27,8 +27,8 @@
     value = 'standalone';
   }
   console.log('====== JAVASCRIPT_PLATFORM ========== ', value);
-  console.log('====== Value of window ', window);
-  console.log('====== Value of module ', module);
+  console.log('====== Value of isBrowser ', isBrowser);
+  console.log('====== Value of isNode ', isNode);
 )
 JAVASCRIPT_PLATFORM = %x(value)
 require 'strscan'
