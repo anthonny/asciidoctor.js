@@ -1,1 +1,1 @@
-commonSpec(Opal, Opal.Asciidoctor);
+commonSpec('Bower', Opal, Opal.Asciidoctor);
