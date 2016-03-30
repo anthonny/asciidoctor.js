@@ -5,18 +5,17 @@ var Jasmine = require('jasmine');
 
 log.title('Jasmine Bower');
 concat([
-  'spec/bower/bower.window.js',
   'build/asciidoctor-all.js',
   'build/asciidoctor-docbook.js',
   'spec/share/common-specs.js',
-  'spec/bower/bower.spec.js',
+  'spec/bower/bower.spec.js'
 ], 'build/bower.spec.all.js');
 
 var jasmine = new Jasmine();
 jasmine.loadConfig({
   spec_dir: 'build',
   spec_files: [
-    'bower.spec.all.js',
+    'bower.spec.all.js'
   ]
 });
 window = {};
