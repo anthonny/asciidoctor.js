@@ -23,4 +23,5 @@ jasmine.loadConfig({
     'bower.spec.all.min.js',
   ]
 });
+window = {};
 jasmine.execute();

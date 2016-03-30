@@ -19,4 +19,5 @@ jasmine.loadConfig({
     'bower.spec.all.js',
   ]
 });
+window = {};
 jasmine.execute();
