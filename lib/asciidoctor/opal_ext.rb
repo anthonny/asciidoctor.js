@@ -1,6 +1,6 @@
 %x(
   var isNode = typeof module !== 'undefined' && module.exports,
-      isBrowser = typeof XMLHttpRequest !== 'undefined',
+      isBrowser = typeof window !== 'undefined',
       isNashorn = typeof Java !== 'undefined' && Java.type,
       isRhino = typeof java !== 'undefined',
       value;
