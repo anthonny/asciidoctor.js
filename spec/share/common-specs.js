@@ -84,7 +84,7 @@ var commonSpec = function(testOptions, Opal, Asciidoctor) {
       });
 
       it('=== Test should embed assets', function() {
-        var options = Opal.hash({doctype: 'article', safe: 'unsafe', header_footer: true, attributes: ['showtitle', 'stylesheet=asciidoctor.css', 'stylesdir=file://'+testOptions.baseDir+'/build']});
+        var options = Opal.hash({doctype: 'article', safe: 'unsafe', header_footer: true, attributes: ['showtitle', 'stylesheet=asciidoctor.css', 'stylesdir='+testOptions.baseDir+'/build']});
         var html = Asciidoctor.$convert('=== Test', options);
         expect(html).toContain('Asciidoctor default stylesheet');
       });
@@ -136,13 +136,13 @@ var commonSpec = function(testOptions, Opal, Asciidoctor) {
 
     describe('Include', function() {
       it('Should include file', function() {
-        var opts = Opal.hash({base_dir: 'file://'+testOptions.baseDir, 'safe': 'safe'});
+        var opts = Opal.hash({base_dir: testOptions.baseDir, 'safe': 'safe'});
         var html = Asciidoctor.$convert('include::spec/share/include.adoc[]', opts);
         expect(html).toContain('include content');
       });
 
       it('Should include csv file in table', function() {
-        var opts = Opal.hash({base_dir: 'file://'+testOptions.baseDir, 'safe': 'safe'});
+        var opts = Opal.hash({base_dir: testOptions.baseDir, 'safe': 'safe'});
         var html = Asciidoctor.$convert(',===\ninclude::spec/share/sample.csv[]\n,===', opts);
         expect(html).toContain('March');
       });

@@ -1,7 +1,7 @@
 var path = require('path');
 var testOptions = {
   platform: 'Bower',
-  baseDir: path.join(__dirname, '..')
+  baseDir: 'file://' + path.join(__dirname, '..')
 };
 
 commonSpec(testOptions, Opal, Opal.Asciidoctor);
