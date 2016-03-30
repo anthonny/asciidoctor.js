@@ -119,7 +119,6 @@ class File
         var status = -1;
         try {
           var xhr = new XMLHttpRequest();
-          console.log('======== Path', path);
           xhr.open('GET', path, false);
           xhr.addEventListener('load', function() {
             status = this.status;

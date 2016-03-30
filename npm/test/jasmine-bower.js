@@ -20,10 +20,10 @@ jasmine.loadConfig({
 });
 window = {};
 
-if (typeof XMLHttpRequest === 'undefined') {
-  XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-  // Define overrideMimeType, not define by default in wrapper
-  XMLHttpRequest.prototype.overrideMimeType = function() {};
-}
+// if (typeof XMLHttpRequest === 'undefined') {
+//   XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+//   // Define overrideMimeType, not define by default in wrapper
+//   XMLHttpRequest.prototype.overrideMimeType = function() {};
+// }
 
 jasmine.execute();
