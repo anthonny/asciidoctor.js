@@ -9,6 +9,7 @@ if (!process.env.MINIFY) {
 }
 log.title('Jasmine Bower.min');
 concat([
+  'spec/bower/bower.window.js',
   'build/asciidoctor-all.min.js',
   'build/asciidoctor-docbook.min.js',
   'spec/share/common-specs.js',
