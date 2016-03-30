@@ -20,4 +20,11 @@ jasmine.loadConfig({
   ]
 });
 window = {};
+
+if (!XMLHttpRequest) {
+  XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+  // Define overrideMimeType, not define by default in wrapper
+  XMLHttpRequest.prototype.overrideMimeType = function() {};
+}
+
 jasmine.execute();
