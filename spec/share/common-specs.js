@@ -84,7 +84,7 @@ var commonSpec = function(testOptions, Opal, Asciidoctor) {
       });
 
       it('=== Test should embed assets', function() {
-        var options = Opal.hash({doctype: 'article', safe: 'unsafe', header_footer: true, attributes: ['showtitle', 'stylesheet=asciidoctor.css', 'stylesdir=file://'+testOptions.baseDir+'/../../build']});
+        var options = Opal.hash({doctype: 'article', safe: 'unsafe', header_footer: true, attributes: ['showtitle', 'stylesheet=asciidoctor.css', 'stylesdir=file://'+testOptions.baseDir+'/build']});
         var html = Asciidoctor.$convert('=== Test', options);
         expect(html).toContain('Asciidoctor default stylesheet');
       });
