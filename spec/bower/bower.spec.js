@@ -1,3 +1,3 @@
-var window = {};
+window = {};
 
 commonSpec('Bower', Opal, Opal.Asciidoctor);
